@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Marina Cipta Pratama</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+<!--
+    
+TemplateMo 561 Purple Buzz
+
+https://templatemo.com/tm-561-purple-buzz
+
+-->
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="index.html">
+                <img src="assets/img/apple-icon.png" alt="Logo" style="height: 25px; margin-bottom: 5px;">
+                <span class="text-dark h4">Marina</span> <span class="text-primary h4">Cipta Pratama</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">Profil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="work.html">Klien</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-link" href="admin/login.html"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+
+    <!-- Start Banner Hero -->
+    <section class="bg-light" style="background-color: white !important">
+        <div class="container py-4">
+            <div class="row align-items-center justify-content-between">
+                <div class="contact-header col-lg-4">
+                    <h1 class="h2 pb-3 text-primary">Kontak</h1>
+                    <h3 class="h4 regular-400">Buang Keraguanmu</h3>
+                    <p class="light-300">
+                        Kami siap membantu Anda mencapai solusi terbaik. Jangan ragu untuk menghubungi kami melalui informasi kontak yang tersedia."
+                </div>
+                <div class="contact-img col-lg-5 align-items-end col-md-4">
+                    <img src="./assets/img/banner-img-01.svg" style="width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Hero -->
+
+
+    <!-- Start Contact -->
+    <section class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-8 text-center">
+                <h1 class="h2 text-primary pt-3">Wujudkan Kinerja Sukses Bersama Kami</h1>
+                <p class="text-muted pb-5 light-300">
+                    Percayakan strategi dan pelaksanaan kinerja Anda kepada kami. Dengan pengalaman dan keahlian yang teruji, kami siap membantu mencapai hasil yang optimal untuk kesuksesan Anda.
+                </p>
+            </div>
+
+            <!-- Start Contact Form -->
+            <div class="col-lg-8">
+                <form class="contact-form row" id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" id="nama" name="nama" placeholder="Nama" required>
+                            <label for="nama">Nama</label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="email" class="form-control form-control-lg light-300" id="email" name="email" placeholder="Email" required>
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="tel" class="form-control form-control-lg light-300" id="noTelp" name="noTelp" placeholder="No. Telp" required>
+                            <label for="noTelp">No. Telp</label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" id="perusahaan" name="perusahaan" placeholder="Nama Perusahaan" required>
+                            <label for="perusahaan">Nama Perusahaan</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control form-control-lg light-300" id="subjek" name="subjek" placeholder="Subjek" required>
+                            <label for="subjek">Subjek</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control light-300" rows="8" placeholder="Pesan" id="pesan" name="pesan" required></textarea>
+                            <label for="pesan">Pesan</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-12 m-auto text-end">
+                        <button type="submit" class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300" style="background-color: #d3ecda; border-color: #d3ecda; color: black !important;">
+                            Kirim Pesan
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- End Contact Form -->
+        </div>
+    </section>
+    <!-- End Contact -->
+
+
+        <!-- Start Footer -->
+        <footer class="bg-secondary pt-4" style="background-color: #d3ecda !important">
+            <div class="container">
+                <div class="row py-4">
+    
+                    <div class="col-lg-3 col-12 align-left">
+                        <a class="navbar-brand" href="index.html">
+                            <i class='bx bx-buildings bx-sm text-light' style="color: black !important"></i>
+                            <span class="text-light h5" style="color: black !important">Marina</span> <span class="text-light h5 semi-bold-600" style="color: black !important">Cipta Pratama</span>
+                        </a>
+                        <p class="text-light my-lg-4 my-2" style="color: black !important">
+                            Ada pertanyaan? Tim kami akan dengan senang hati menjawab. Hubungi kami sekarang juga!
+                        </p>
+                        <ul class="list-inline footer-icons light-300">
+                            <li class="list-inline-item m-0">
+                                <a class="text-light" target="_blank" href="http://facebook.com/">
+                                    <i class='bx bxl-facebook-square bx-md' style="color: black !important"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-0">
+                                <a class="text-light" target="_blank" href="https://www.linkedin.com/">
+                                    <i class='bx bxl-linkedin-square bx-md' style="color: black !important"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-0">
+                                <a class="text-light" target="_blank" href="https://www.whatsapp.com/">
+                                    <i class='bx bxl-whatsapp-square bx-md' style="color: black !important"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                        <h3 class="h4 pb-lg-3 text-light light-300" style="color: black !important">Tentang Kami</h2>
+                            <ul class="list-unstyled text-light light-300">
+                                <li class="pb-2">
+                                    <i class='bx-fw bx bxs-chevron-right bx-xs' style="color: black !important"></i><a class="text-decoration-none text-light" style="color: black !important" href="index.html">Beranda</a>
+                                </li>
+                                <li class="pb-2">
+                                    <i class='bx-fw bx bxs-chevron-right bx-xs' style="color: black !important"></i><a class="text-decoration-none text-light py-1" style="color: black !important" href="about.html">Profil</a>
+                                </li>
+                                <li class="pb-2">
+                                    <i class='bx-fw bx bxs-chevron-right bx-xs' style="color: black !important"></i><a class="text-decoration-none text-light py-1" style="color: black !important" href="work.html">Klien</a>
+                                </li>
+                                <li class="pb-2">
+                                    <i class='bx-fw bx bxs-chevron-right bx-xs' style="color: black !important"></i><a class="text-decoration-none text-light py-1" style="color: black !important" href="contact.html">Kontak</a>
+                                </li>
+                            </ul>
+                    </div>
+    
+                    <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                        <h2 class="h4 pb-lg-3 text-light light-300" style="color: black !important">Kinerja Kami</h2>
+                        <ul class="list-unstyled text-light light-300">
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs' style="color: black !important"></i><a class="text-decoration-none text-light py-1" style="color: black !important" href="#">Pengembangan Wilayah</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs' style="color: black !important"></i><a class="text-decoration-none text-light py-1" style="color: black !important" href="#">Transportasi & Prasarana</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs' style="color: black !important"></i><a class="text-decoration-none text-light py-1" style="color: black !important" href="#">Amdal & Izin Lingkungan</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs' style="color: black !important"></i><a class="text-decoration-none text-light py-1" style="color: black !important" href="#">Teknologi Informasi</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs' style="color: black !important"></i><a class="text-decoration-none text-light py-1" style="color: black !important" href="#">Pengembangan SDM</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs' style="color: black !important"></i><a class="text-decoration-none text-light py-1" style="color: black !important" href="#">Air Bersih, Drainase & Sanitasi</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                        <h2 class="h4 pb-lg-3 text-light light-300" style="color: black !important">For Client</h2>
+                        <ul class="list-unstyled text-light light-300">
+                            <li class="pb-2">
+                                <i class='bx-fw bx bx-phone bx-xs' style="color: black !important"></i><a class="text-decoration-none text-light py-1" style="color: black !important" href="tel:010-020-0340">021-2271-7134</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bx-mail-send bx-xs' style="color: black !important"></i><a class="text-decoration-none text-light py-1" style="color: black !important" href="mailto:info@company.com">marinaciptapratama@yahoo.co.id</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="w-100 bg-primary py-3" style= "background-color: #91ba9c !important">
+                <div class="container">
+                    <div class="row pt-2">
+                        <div class="col-lg-6 col-sm-12">
+                            <p class="text-lg-start text-center text-light light-300" style="color: black !important">
+                                © Copyright 2024 PT. MARINA CIPTA PRATAMA. All Rights Reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </footer>
+        <!-- End Footer -->
+
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Templatemo -->
+    <script src="assets/js/templatemo.js"></script>
+    <!-- Custom -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+    function sendToWhatsApp(event) {
+        event.preventDefault();
+        
+        // Ambil nilai dari form
+        const nama = document.getElementById('nama').value;
+        const email = document.getElementById('email').value;
+        const noTelp = document.getElementById('noTelp').value;
+        const perusahaan = document.getElementById('perusahaan').value;
+        const subjek = document.getElementById('subjek').value;
+        const pesan = document.getElementById('pesan').value;
+
+        // Format pesan
+        const formattedMessage = 
+    `*Form Kontak Website*
+    ------------------------
+    *Nama:* ${nama}
+    *Email:* ${email}
+    *No. Telp:* ${noTelp}
+    *Perusahaan:* ${perusahaan}
+    *Subjek:* ${subjek}
+    *Pesan:* ${pesan}`;
+
+        // Nomor WhatsApp tujuan (ganti dengan nomor yang diinginkan)
+        const phoneNumber = '6281266165372'; // Format: kode negara tanpa + diikuti nomor HP
+
+        // Encode pesan untuk URL
+        const encodedMessage = encodeURIComponent(formattedMessage);
+
+        // Buat URL WhatsApp
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+        // Buka WhatsApp di tab baru
+        window.open(whatsappURL, '_blank');
+    }
+    </script>
+
+</body>
+
+</html>

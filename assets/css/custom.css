@@ -1,0 +1,78 @@
+.text-primary.h4 {
+  color: #1b582b !important; /* Mengubah warna teks menjadi hijau */
+}
+
+.text-primary {
+    color: #000000 !important; /* Mengubah warna teks menjadi hijau */
+  }
+  
+.custom-color {
+    color: #000000; /* Change this to your desired color */
+}
+
+.banner-button {
+    background-color: #ffffff; /* Green color */
+    border-color: #ffffff; /* Green border */
+    
+}
+.banner-button:hover {
+    background-color: #ffffff; /* Green color */
+    border-color: #000000; /* Green border */
+    
+}
+
+.service-tag {
+    background-color: #d3ecda !important;
+}
+
+.filter-btn {
+    color: black !important;
+}
+
+.filter-btn:hover {
+    background-color: white !important;
+}
+
+
+.btn-outline-primary{
+    background-color: white !important;
+}
+
+.btn-outline-primary:active{
+    background-color: white !important;
+}
+
+.btn-primary {
+    background-color: #ffffff !important;
+    border-color: black !important
+}
+
+.btn-custom {
+    background-color: #d3ecda; /* Hijau */
+    border-color: 2px solid #d3ecda; /* Biru */
+    color: black /* Putih */
+}
+
+.text-border {
+    border: 2px solid white;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    max-width: 90%;
+    box-sizing: border-box;
+    font-size: 1em;
+    overflow: hidden;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
