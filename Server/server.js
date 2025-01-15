@@ -12,7 +12,9 @@ const jwtSecret = 'rahasiawkwk';
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://your-vercel-app.vercel.app'
+}));
 
 // Konfigurasi Multer
 const storage = multer.memoryStorage();
