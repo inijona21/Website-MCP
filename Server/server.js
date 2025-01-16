@@ -8,7 +8,7 @@ const { MongoClient, GridFSBucket, ObjectId } = require('mongodb');
 const jwt = require('jsonwebtoken');
 const app = express();
 const port = process.env.PORT || 3000;
-const jwtSecret = 'rahasiawkwk';
+const jwtSecret = process.env.JWT_SECRET || 'rahasiawkwk';
 
 // Middleware
 app.use(bodyParser.json());
@@ -19,8 +19,13 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 // MongoDB URI
-const uri = "mongodb+srv://kelompok3admin:DHXEi0yKSGE9Wq3p@pppl.nn2fu.mongodb.net/retryWrites=true&w=majority";
+const uri = process.env.MONGODB_URI || "mongodb+srv://kelompok3admin:DHXEi0yKSGE9Wq3p@pppl.nn2fu.mongodb.net/retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Pastikan Anda memeriksa apakah variabel lingkungan ini ada
+if (!process.env.JWT_SECRET || !process.env.MONGODB_URI) {
+  console.warn("Warning: Using default values for JWT_SECRET or MONGODB_URI. Make sure to set these in production.");
+}
 
 function authenticateUser(req, res, next) {
     const authHeader = req.headers['authorization'];
@@ -31,7 +36,7 @@ function authenticateUser(req, res, next) {
     }
 
     try {
-        const decoded = jwt.verify(token, 'rahasiawkwk');
+        const decoded = jwt.verify(token, jwtSecret);
         console.log('Decoded Token:', decoded); // Tambahkan log untuk debug
         req.user = decoded;
         next();
