@@ -1,8 +1,5 @@
 {
     "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "https://test-zyev.onrender.com/api/$1"
-      }
+        {"source": "/(.*)", "destination": ""}
     ]
-  }
+}
