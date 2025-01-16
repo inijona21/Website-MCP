@@ -116,32 +116,44 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
             const logoutButton = document.getElementById('logoutButton');
-            if (logoutButton) {
-                logoutButton.addEventListener('click', function(event) {
+            const projectTrackingLink = document.querySelector('a[href="project-tracking-admin.html"]');
+                if (logoutButton) {
+                    logoutButton.addEventListener('click', function(event) {
                     event.preventDefault();
                     console.log('Logout button clicked'); // Debugging log
                     // Clear the token or session data
                     localStorage.removeItem('token');
+                    localStorage.removeItem('role'); // Remove role if stored
                     console.log('Token removed'); // Debugging log
                     // Redirect to the login page
                     window.location.href = 'login.html';
                 });
-            } else {
+                } else {
                 console.error('Logout button not found'); // Debugging log
-            }
-        });
+                }
+            });
         </script>
         <script>
             const text = "Halo, Selamat Datang Partner !!";
             let index = 0;
             const speed = 100; // Adjust typing speed
 
-            function typeWriter() {
-                if (index < text.length) {
-                    document.getElementById("typing-text").innerHTML += text.charAt(index);
-                    index++;
-                    setTimeout(typeWriter, speed);
-                }
+        if (projectTrackingLink) {
+            projectTrackingLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                const userRole = localStorage.getItem('role'); // Assume role is stored in localStorage
+                if (userRole === 'admin') {
+                    window.location.href = 'project-tracking-admin.html';
+                } else if (userRole === 'user') {
+                    window.location.href = 'project-tracking-user.html';
+                } else {
+                    console.error('Role not recognized'); // Debugging log
+            });
+        } else {
+            console.error('Project Tracking link not found'); // Debugging log
+        }
+    });
+    </script>
             }
 
             window.onload = typeWriter;
