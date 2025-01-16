@@ -107,7 +107,7 @@
                     // Ambil data (termasuk role) dari respons server
                     const data = await response.json();
                     localStorage.setItem('token', data.token); // Simpan token di localStorage
-    
+                    localStorage.setItem('role', data.role);
                     // Cek role pengguna dan navigasi ke halaman yang sesuai
                     if (data.role === 'admin') {
                         alert('Login successful as Admin!');
