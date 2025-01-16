@@ -12,7 +12,10 @@ const jwtSecret = process.env.JWT_SECRET || 'rahasiawkwk';
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://test-rho-roan-87.vercel.app', // Replace with your actual Vercel domain
+    credentials: true
+}));
 
 // Konfigurasi Multer
 const storage = multer.memoryStorage();
