@@ -693,7 +693,7 @@
                 }
                 
                 // Kirim permintaan ke server untuk mendapatkan peran pengguna
-                fetch('http://localhost:3000/getUserRole', {
+                fetch('https://test-zyev.onrender.com/getUserRole', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 })
                 .then(response => response.json())
