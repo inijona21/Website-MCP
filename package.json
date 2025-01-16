@@ -1,4 +1,11 @@
 {
+  "name": "pppl-project",
+  "version": "1.0.0",
+  "description": "dor",
+  "main": "Server/server.js",
+  "scripts": {
+    "start": "node Server/server.js"
+  },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bcryptjs": "^2.4.3",

@@ -86,15 +86,15 @@
             event.preventDefault();
             const button = document.getElementById('loginButton');
             const spinner = button.querySelector('.spinner-border');
-            
+    
             // Show loading state
             button.disabled = true;
             spinner.classList.remove('d-none');
-            
+    
             // Ambil nilai email dan password dari form
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-
+    
             try {
                 // Kirim permintaan POST ke server
                 const response = await fetch('http://localhost:3000/login', {
@@ -102,13 +102,22 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password }),
                 });
-
+    
                 if (response.ok) {
-                    // Ambil token dari respons server
+                    // Ambil data (termasuk role) dari respons server
                     const data = await response.json();
                     localStorage.setItem('token', data.token); // Simpan token di localStorage
-                    alert('Login successful!');
-                    window.location.href = 'project-tracking-admin.html'; // Redirect ke halaman admin
+    
+                    // Cek role pengguna dan navigasi ke halaman yang sesuai
+                    if (data.role === 'admin') {
+                        alert('Login successful as Admin!');
+                        window.location.href = 'project-tracking-admin.html'; // Redirect ke halaman admin
+                    } else if (data.role === 'user') {
+                        alert('Login successful as User!');
+                        window.location.href = 'project-tracking-user.html'; // Redirect ke halaman user
+                    } else {
+                        alert('Login successful, but role is unknown.');
+                    }
                 } else {
                     // Tampilkan pesan error jika login gagal
                     const errorMessage = await response.text();
