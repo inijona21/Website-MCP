@@ -100,22 +100,21 @@ async function main() {
         // Login Route
         app.post('/login', async (req, res) => {
             const { email, password } = req.body;
-        
             try {
                 const user = await users.findOne({ email });
                 if (!user) {
                     return res.status(401).send('Invalid email or password');
                 }
-        
+     
                 const isPasswordValid = await bcrypt.compare(password, user.password);
                 if (!isPasswordValid) {
                     return res.status(401).send('Invalid email or password');
                 }
-        
+     
                 // Generate token
                 const token = jwt.sign({ userId: user._id, role: user.role }, jwtSecret, { expiresIn: '1h' });
-        
-                // Send token to client
+     
+                // Send token and role to client
                 res.status(200).json({ token, role: user.role });
             } catch (error) {
                 console.error('Error during login:', error);
