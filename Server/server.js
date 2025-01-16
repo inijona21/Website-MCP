@@ -20,7 +20,7 @@ const upload = multer({ storage: storage });
 
 // MongoDB URI
 const uri = process.env.MONGODB_URI || "mongodb+srv://kelompok3admin:DHXEi0yKSGE9Wq3p@pppl.nn2fu.mongodb.net/retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const client = new MongoClient(uri);
 
 // Pastikan Anda memeriksa apakah variabel lingkungan ini ada
 if (!process.env.JWT_SECRET || !process.env.MONGODB_URI) {
@@ -295,6 +295,10 @@ async function main() {
                 console.error('Error serving image:', error);
                 res.status(500).send('Failed to serve image');
             }
+        });
+
+        app.get('/', (req, res) => {
+            res.send('Welcome to the API');
         });
 
         app.listen(port, () => {
