@@ -72,16 +72,16 @@
 }
 /* Default background styling */
 .banner-wrapper {
-    background-image: url('path/to/your/image.png');
-    background-size: cover; /* Pastikan background menutupi area */
-    background-position: center; /* Tengah-tengah background */
-    background-repeat: no-repeat; /* Hindari pengulangan */
+    background-image: url('./../img/banner-bg-01.jpg') !important;
+    background-size: cover !important; /* Pastikan background menutupi area */
+    background-position: center !important; /* Tengah-tengah background */
+    background-repeat: no-repeat !important; /* Hindari pengulangan */
 }
 
 /* Styling untuk layar mobile */
 @media (max-width: 768px) {
     .banner-wrapper {
-        background-size: contain; /* Menyesuaikan ukuran */
-        background-position: top; /* Fokus pada bagian atas */
+        background-size: contain !important; /* Menyesuaikan ukuran */
+        background-position: top !important; /* Fokus pada bagian atas */
     }
 }
