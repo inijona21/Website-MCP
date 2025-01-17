@@ -70,3 +70,18 @@
     height: auto;
     object-fit: cover;
 }
+/* Default background styling */
+.banner-wrapper {
+    background-image: url('path/to/your/image.png');
+    background-size: cover; /* Pastikan background menutupi area */
+    background-position: center; /* Tengah-tengah background */
+    background-repeat: no-repeat; /* Hindari pengulangan */
+}
+
+/* Styling untuk layar mobile */
+@media (max-width: 768px) {
+    .banner-wrapper {
+        background-size: contain; /* Menyesuaikan ukuran */
+        background-position: top; /* Fokus pada bagian atas */
+    }
+}
