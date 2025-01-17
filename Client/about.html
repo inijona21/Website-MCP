@@ -324,6 +324,40 @@
     <script src="assets/js/templatemo.js"></script>
     <!-- Custom -->
     <script src="assets/js/custom.js"></script>
+       
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userDropdownMenu = document.getElementById('userDropdownMenu');
+            const token = localStorage.getItem('token');
+    
+            if (token) {
+                // User is logged in
+                userDropdownMenu.innerHTML = `
+                    <li><a class="dropdown-item" href="./admin/dashboard.html">Dashboard</a></li>
+                    <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
+                `;
+    
+                const logoutButton = document.getElementById('logoutButton');
+                if (logoutButton) {
+                    logoutButton.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        console.log('Logout button clicked'); // Debugging log
+                        // Clear the token or session data
+                        localStorage.removeItem('token');
+                        localStorage.removeItem('role'); // Remove role if stored
+                        console.log('Token removed'); // Debugging log
+                        // Redirect to the login page
+                        window.location.href = './admin/login.html';
+                    });
+                }
+            } else {
+                // User is not logged in
+                userDropdownMenu.innerHTML = `
+                    <li><a class="dropdown-item" href="./admin/login.html">Login</a></li>
+                `;
+            }
+        });
+    </script>
 
 </body>
 
